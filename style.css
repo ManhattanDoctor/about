@@ -158,7 +158,10 @@ a:hover { text-decoration-color: var(--link); }
 .header__content {
   position: relative;
   z-index: 1;
-  max-width: 620px;
+  max-width: 720px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header__photo {
@@ -167,8 +170,15 @@ a:hover { text-decoration-color: var(--link); }
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--border);
-  margin-bottom: 24px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .header__content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .header h1 {
