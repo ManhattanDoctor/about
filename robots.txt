@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://manhattandoctor.github.io/about/sitemap.xml
+Sitemap: https://manhattandoctor.github.io/sitemap.xml
