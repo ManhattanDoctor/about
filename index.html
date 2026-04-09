@@ -3,24 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ренат Губаев</title>
+    <title>Ренат Губаев - fullstack-разработчик, blockchain-архитектор</title>
     <meta
       name="description"
-      content="Ренат Губаев — fullstack-разработчик, blockchain-архитектор. МФТИ, РАНХиГС, публикации IEEE, open-source библиотеки."
+      content="Ренат Губаев - fullstack-разработчик, blockchain-архитектор. МФТИ, РАНХиГС, публикации IEEE, open-source библиотеки."
     />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ренат Губаев - fullstack-разработчик, blockchain-архитектор" />
+    <meta property="og:description" content="20+ лет в разработке: enterprise-системы на стыке blockchain, AI и финтеха. МФТИ, РАНХиГС, 2 публикации IEEE, 30+ npm-пакетов." />
+    <meta property="og:locale" content="ru_RU" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%237c6cff'/%3E%3Ctext x='50' y='54' font-family='system-ui,sans-serif' font-size='42' font-weight='700' fill='white' text-anchor='middle' dominant-baseline='central'%3E%D0%A0%D0%93%3C/text%3E%3C/svg%3E" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link rel="stylesheet" href="style.css" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ренат Губаев",
+      "jobTitle": "Fullstack-разработчик, blockchain-архитектор",
+      "url": "https://renatgubaev.ru",
+      "sameAs": [
+        "https://github.com/ManhattanDoctor",
+        "https://ru.linkedin.com/in/renat-gubaev-a50349154",
+        "https://t.me/renatgubaev",
+        "https://www.npmjs.com/~renatg"
+      ],
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "МФТИ (Московский физико-технический институт)"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "РАНХиГС (Бизнес школа IT-управления)"
+        }
+      ],
+      "knowsAbout": ["Blockchain", "Hyperledger Fabric", "Ethereum", "TypeScript", "AI/ML", "Cryptography"],
+      "description": "20+ лет в разработке: enterprise-системы на стыке blockchain, AI и финтеха. Автор 30+ npm-пакетов, соавтор 2 публикаций IEEE."
+    }
+    </script>
   </head>
   <body>
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" aria-label="Главная навигация">
       <div class="nav__container">
-        <a href="#top" class="nav__name">РГ</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <a href="#top" class="nav__brand" title="Ренат Губаев">
+          <svg class="nav__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M4 9h16"/>
+            <path d="M9 4v16"/>
+          </svg>
+          <span>Ренат Губаев</span>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
         <ul class="nav__menu" id="navMenu">
@@ -33,11 +83,12 @@
       </div>
     </nav>
 
+    <main>
     <!-- Header -->
     <header class="header" id="top">
       <div class="header__bg"></div>
       <div class="container">
-        <div class="header__content">
+        <div class="header__content fade-in">
           <h1>Ренат Губаев</h1>
           <p class="header__role">
             20+ лет в разработке: от коммуникационных платформ до blockchain и
@@ -53,9 +104,10 @@
     </header>
 
     <!-- Education & Publications -->
-    <section class="section" id="academic">
+    <section class="section" id="academic" aria-label="Образование и публикации">
       <div class="container">
-        <div class="two-col">
+        <h2 class="section__title">Образование и публикации</h2>
+        <div class="two-col fade-in">
           <div>
             <h3 class="label">Базовое образование</h3>
 
@@ -121,7 +173,7 @@
                 </p>
                 <p class="card__sub">
                   <a href="https://mbacio.ru" target="_blank" rel="noopener"
-                    >Школа IT-менеджмента</a
+                    >Бизнес школа IT-управления</a
                   >, подготовка руководителей в сфере IT
                 </p>
                 <p class="card__thesis">
@@ -227,11 +279,11 @@
     </section>
 
     <!-- Expertise -->
-    <section class="section section--alt" id="expertise">
+    <section class="section section--alt" id="expertise" aria-label="Области экспертизы">
       <div class="container">
         <h2 class="section__title">Области экспертизы</h2>
 
-        <div class="expertise__grid">
+        <div class="expertise__grid fade-in">
           <div class="exp-card">
             <svg
               class="exp-card__icon"
@@ -361,76 +413,108 @@
     </section>
 
     <!-- Experience -->
-    <section class="section" id="experience">
+    <section class="section" id="experience" aria-label="Опыт работы">
       <div class="container">
         <h2 class="section__title">Опыт работы</h2>
 
-        <div class="experience__text">
-          <p>
-            Профессиональный путь в разработке начался в 2005 году. Первый
-            значимый опыт&nbsp;&mdash; работа в
-            <strong>CommuniGate Systems</strong>, где в роли старшего и ведущего
-            программиста участвовал в создании клиентской части PRONTO для
-            коммуникационной платформы CommuniGate Pro, объединяющей электронную
-            почту, VoIP и мгновенные сообщения.
-          </p>
+        <div class="timeline fade-in">
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <span class="timeline__period">2025 &mdash; н.в.</span>
+                <span class="timeline__role">Архитектор, fullstack-разработчик</span>
+              </div>
+              <h3><a href="https://dfawl.ru" target="_blank" rel="noopener">DFAWL</a></h3>
+              <p>
+                White Label конструктор платформ для торговли цифровыми финансовыми
+                активами (ЦФА) и утилитарными цифровыми правами (УЦП). Полный жизненный
+                цикл цифровых активов: выпуск, обращение, внебиржевая торговля, краудсейлы
+                и погашение.
+              </p>
+              <p class="timeline__voice">Цель&nbsp;&mdash; сделать запуск платформы ЦФА вопросом недель, а не месяцев.</p>
+            </div>
+          </div>
 
-          <p>
-            В 2010 году основал <strong>Vichatter</strong>&nbsp;&mdash;
-            социальную сеть для видеообщения, которая стала одним из крупнейших
-            видеочатов рунета. Платформа привлекла более 3&nbsp;миллионов
-            пользователей и обслуживала до 500&nbsp;тысяч визитов в день. В
-            рамках проекта была сформирована команда разработчиков и дизайнеров,
-            реализована архитектура с высокой нагрузкой, интегрирован машинный
-            перевод и выстроена система модерации совместно с Лигой безопасного
-            интернета.
-          </p>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <span class="timeline__period">2022 &mdash; 2025</span>
+                <span class="timeline__role">Руководитель команды, fullstack-разработчик</span>
+              </div>
+              <h3><a href="https://chainlab.ru" target="_blank" rel="noopener">Лаборатория блокчейн ChainLab</a></h3>
+              <p>
+                Научный центр &laquo;Идея&raquo;, базовая организация
+                <a href="https://blockchain.mipt.ru" target="_blank" rel="noopener">магистерской программы МФТИ по блокчейну</a>.
+                Реализованы проекты Karma (Hyperledger Labs, IEEE), AI-платформа
+                Gnosis, система биометрической аутентификации Cvartel (IEEE ICDCSW 2025).
+              </p>
+              <p class="timeline__voice">Здесь я совмещаю то, что мне интересно больше всего: исследования и production-код.</p>
+            </div>
+          </div>
 
-          <p>
-            С 2018 года работал в структурах
-            <strong>Норильского Никеля</strong>, где руководил командой
-            разработки сервиса кастодиального обслуживания Symbridge.
-            Проектировал микросервисную архитектуру, разрабатывал платёжные
-            процессы и систему управления цифровыми активами на
-            децентрализованной бирже.
-          </p>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <span class="timeline__period">2018 &mdash; 2022</span>
+                <span class="timeline__role">Руководитель команды разработки</span>
+              </div>
+              <h3>Норильский Никель / Symbridge</h3>
+              <p>
+                Сервис кастодиального обслуживания. Микросервисная архитектура,
+                платёжные процессы и система управления цифровыми активами на
+                децентрализованной бирже.
+              </p>
+              <p class="timeline__voice">Первый опыт на стыке блокчейна и реального бизнеса&nbsp;&mdash; когда за каждой транзакцией стоят регуляторы, аудиторы и реальные деньги.</p>
+            </div>
+          </div>
 
-          <p>
-            С 2022 года&nbsp;&mdash; руководитель команды и
-            fullstack-разработчик в
-            <strong
-              >Лаборатории блокчейн
-              <a href="https://chainlab.ru" target="_blank" rel="noopener"
-                >ChainLab</a
-              ></strong
-            >
-            (Научный центр &laquo;Идея&raquo;), базовой организации
-            <a href="https://blockchain.mipt.ru" target="_blank" rel="noopener"
-              >магистерской программы МФТИ по блокчейну</a
-            >. Реализованы проекты Karma (Hyperledger Labs, IEEE), AI-платформа
-            Gnosis, система биометрической аутентификации Cvartel (IEEE ICDCSW
-            2025).
-          </p>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <span class="timeline__period">2010 &mdash; 2018</span>
+                <span class="timeline__role">Основатель, CEO</span>
+              </div>
+              <h3>Vichatter</h3>
+              <p>
+                Социальная сеть для видеообщения&nbsp;&mdash; один из крупнейших
+                видеочатов рунета. 3+ млн пользователей, до 500K визитов/день.
+                Команда разработчиков и дизайнеров, highload-архитектура, интеграция
+                машинного перевода, модерация совместно с Лигой безопасного интернета.
+              </p>
+              <p class="timeline__voice">Первый опыт построения продукта с нуля&nbsp;&mdash; от идеи до своей команды из 10+ человек и аудитории по всему миру.</p>
+            </div>
+          </div>
 
-          <p>
-            С 2025 года совместно с партнёрами ведётся работа над
-            <a href="https://dfawl.ru" target="_blank" rel="noopener"><strong>DFAWL</strong></a>&nbsp;&mdash;
-            White Label конструктором платформ для торговли цифровыми финансовыми
-            активами (ЦФА) и утилитарными цифровыми правами (УЦП). Продукт
-            позволяет разворачивать готовые платформы в рамках российского
-            законодательства, охватывая полный жизненный цикл цифровых активов:
-            выпуск, обращение, внебиржевая торговля, краудсейлы и погашение.
-          </p>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__head">
+                <span class="timeline__period">2007 &mdash; 2010</span>
+                <span class="timeline__role">Старший / ведущий программист</span>
+              </div>
+              <h3>CommuniGate Systems</h3>
+              <p>
+                Разработка клиентской части PRONTO для коммуникационной платформы
+                CommuniGate Pro, объединяющей электронную почту, VoIP и мгновенные
+                сообщения.
+              </p>
+              <p class="timeline__voice">Первая работа, где цена ошибки&nbsp;&mdash; тысячи людей без связи. Это задало планку.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section class="section section--alt" id="projects">
+    <section class="section section--alt" id="projects" aria-label="Реализованные проекты">
       <div class="container">
         <h2 class="section__title">Реализованные проекты</h2>
 
-        <div class="projects__list">
+        <div class="projects__list fade-in">
           <article class="project">
             <div class="project__marker"></div>
             <div class="project__body">
@@ -610,50 +694,49 @@
             </div>
           </article>
 
-          <p class="projects__more">и другие проекты</p>
+          <p class="projects__more">и ещё <a href="https://github.com/ManhattanDoctor" target="_blank" rel="noopener">60+ репозиториев на GitHub</a></p>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact">
+    <section class="section" id="contact" aria-label="Контакты">
       <div class="container">
-        <h2 class="section__title">Контакты</h2>
-        <ul class="contacts">
-          <li>
-            <a href="mailto:renat.gubaev@gmail.com">renat.gubaev@gmail.com</a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/ManhattanDoctor"
-              target="_blank"
-              rel="noopener"
-              >GitHub</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://ru.linkedin.com/in/renat-gubaev-a50349154"
-              target="_blank"
-              rel="noopener"
-              >LinkedIn</a
-            >
-          </li>
-        </ul>
+        <h2 class="section__title section__title--center">Контакты</h2>
+        <div class="contact-links fade-in">
+          <a href="https://t.me/renatgubaev" class="contact-link contact-link--primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.2 4.6L2.4 11.1c-.7.3-.7.8 0 1l4.8 1.5 1.9 5.9c.2.5.7.5 1 .2l2.7-2.2 5.3 3.9c.5.4 1 .2 1.1-.5L22.3 5.6c.2-.8-.4-1.3-1.1-1z"/>
+              <path d="M9.2 13.6l8.5-5.3"/>
+            </svg>
+            <span>Telegram</span>
+          </a>
+          <a href="mailto:renat.gubaev@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M22 4L12 13 2 4"/>
+            </svg>
+            <span>Email</span>
+          </a>
+          <a href="https://github.com/ManhattanDoctor" class="contact-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://ru.linkedin.com/in/renat-gubaev-a50349154" class="contact-link" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
       </div>
     </section>
+    </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__oss">
-          <a href="https://github.com/ManhattanDoctor" target="_blank" rel="noopener">70+ github-репозиториев</a>
-          <a href="https://www.npmjs.com/~renatg" target="_blank" rel="noopener">30+ npm-пакетов</a>
-          <a href="https://github.com/hyperledger-labs/karma-charity-platform" target="_blank" rel="noopener">Hyperledger Labs Contributor</a>
-          <a href="https://github.com/ManhattanDoctor?achievement=arctic-code-vault-contributor&tab=achievements" target="_blank" rel="noopener">Arctic Code Vault</a>
-        </div>
-        <p class="footer__copy">&copy; <script>document.write(new Date().getFullYear())</script> Ренат Губаев</p>
-      </div>
-    </footer>
 
     <script src="script.js"></script>
   </body>
