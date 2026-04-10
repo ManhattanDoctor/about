@@ -637,7 +637,9 @@ a:hover { text-decoration-color: var(--link); }
 .contact-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  min-width: 160px;
   padding: 12px 24px;
   background: var(--surface);
   border: 1px solid var(--border);
